@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16sp"
+    tools:context=".inventory.NewItemFood">
+
+    <TextView
+        android:id="@+id/nametext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:text="Enter name for new Item:"
+        android:textColor="#ffff"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/nameedit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nametext"
+        android:layout_marginTop="19dp"
+        android:hint="Enter here"
+        android:textColor="@color/white"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/initqtytext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nameedit"
+        android:layout_marginTop="20dp"
+        android:text="Enter initial quantity:"
+        android:textColor="@color/gray"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/initqtyedit"
+        android:layout_marginTop="10sp"
+        android:layout_below="@id/initqtytext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter here"
+        android:textSize="15sp"
+        android:textColor="@color/gray"/>
+    <ImageView
+        android:id="@+id/newimages"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:layout_below="@id/imgselect"
+        android:layout_marginTop="50sp"
+        android:layout_centerHorizontal="true"/>
+
+
+    <ImageView
+        android:id="@+id/Camera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/newimages"
+        android:layout_marginBottom="161dp"
+        android:onClick="takepicture"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.383"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@android:drawable/ic_menu_camera" />
+
+    <Button
+        android:id="@+id/imgselect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/initqtyedit"
+        android:text="Select image for item"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25sp"/>
+</RelativeLayout>
